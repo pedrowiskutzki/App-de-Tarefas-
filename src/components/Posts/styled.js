@@ -12,15 +12,6 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
 
-        img {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 8px;
-            border: 4px solid #202024;
-            outline: 2px solid #00875f;
-            
-        }
-
         strong {
             line-height: 1.6;
             color: #e1e1e6;

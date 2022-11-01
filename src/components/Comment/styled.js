@@ -12,7 +12,7 @@ export const Container = styled.div`
 
     button {
         background: transparent;
-        border: 0;
+        border: 0px;
         color: #8d8d99;
         line-height: 0;
         border-radius: 2px;
@@ -20,6 +20,20 @@ export const Container = styled.div`
 
     :hover button {
         color: red;
+    }
+
+    p{
+        width: 80%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .checkBox{
+        margin-right: -8%;
+        margin-top: 0.3%;
+        width: 18px;
+        height: 18px;
     }
 
 `;
