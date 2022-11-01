@@ -9,6 +9,6 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     padding: 30px;
-    width: 80%;
+    width: 70%;
 
 `;

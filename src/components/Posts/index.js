@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Comment } from "../Comment";
 
-import { CommentList, Container, Content, Form } from "./styled";
+import { CommentList, Container, Form } from "./styled";
 
 export function Posts({ info }) {
     const [comments, setComments] = useState([
@@ -28,7 +28,6 @@ export function Posts({ info }) {
 
         setComments([...comments, NewComment]);
         setNewCommentTxt('')
-
     }
     
     function deleteComment(id) {
@@ -39,22 +38,6 @@ export function Posts({ info }) {
 
     return (
         <Container>
-            <header>
-                <img src={info.author.avatarUrl} />
-                <strong>{info.author.name}</strong>
-            </header>
-
-            <Content>
-                {
-                    info.content.map(res => {
-                        return (
-                            <div key={res.id}>
-                                <p></p>
-                            </div>
-                        )
-                    })
-                }
-            </Content>
 
             <Form onSubmit={handleCreateNewComment}>
                 <strong>Diga sua Tarefa</strong>
@@ -76,7 +59,8 @@ export function Posts({ info }) {
                         <Comment
                             key={comment.id}
                             comment={comment}
-                            onDeleteComment={deleteComment}
+                            onDeleteComment={deleteComment}       
+                            
                         />
                     )
                 })}

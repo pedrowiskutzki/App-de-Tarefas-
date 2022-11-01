@@ -12,7 +12,7 @@ export function Home() {
             <Content>
                 {postArray.map(post => {
                     return(
-                        <Posts key={post.id} info={post}/>
+                        <Posts key={post.id} info={post} />                 
                     )
                 })}
             </Content>
