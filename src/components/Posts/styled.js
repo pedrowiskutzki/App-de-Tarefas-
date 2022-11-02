@@ -20,18 +20,12 @@ export const Container = styled.div`
     }
 `;
 
-export const Content = styled.div`
-    margin-top: 1.5rem;
-    line-height: 1.6;
-    color: #c4c4cc;
-
-`;
-
 export const Form = styled.form`
     width: 100%;
     margin-top: 1.5rem;
     padding: 1.5rem 0;
     border-top: 1px solid #323238;
+    
 
     strong {
         line-height: 1.6;
@@ -49,6 +43,8 @@ export const Form = styled.form`
         margin-top: 1rem;
         color: #e1e1e6;
         line-height: 1.4;
+        
+        
     }
 
     button {
