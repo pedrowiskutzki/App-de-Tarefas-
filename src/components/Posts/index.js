@@ -7,8 +7,9 @@ export function Posts({ info }) {
     const [comments, setComments] = useState([
         {
             id: Math.random(),
-            content: "Suas Tarefas"
-        }
+            content: "Suas Tarefas",
+            done:false,
+        }  
     ])
 
     const [newCommentTxt, setNewCommentTxt] = useState('');
@@ -24,6 +25,8 @@ export function Posts({ info }) {
         const NewComment = {
             id: Math.random(),
             content: newCommentTxt,
+            done:false,
+            
         }
 
         setComments([...comments, NewComment]);
@@ -36,9 +39,17 @@ export function Posts({ info }) {
         setComments(commentWithoutDeletedOne);
     }
 
+    function doneComment(id) {
+        const doneCommentTask= comments.map((comment) => 
+        comment.id === id ? { ...comment, done: !comment.done} : comment
+       ); 
+        setComments(doneCommentTask);
+        console.log(comments)
+    }
+
     return (
         <Container>
-
+            
             <Form onSubmit={handleCreateNewComment}>
                 <strong>Diga sua Tarefa</strong>
                 <textarea
@@ -56,11 +67,11 @@ export function Posts({ info }) {
             <CommentList>
                 {comments.map(comment => {
                     return (
-                        <Comment
+                        <Comment  
                             key={comment.id}
                             comment={comment}
                             onDeleteComment={deleteComment}       
-                            
+                            onDoneComment={doneComment}
                         />
                     )
                 })}
