@@ -8,5 +8,3 @@ Deletar: possibilita a exclusão da tarefa.
 Check: altera o estado da tarefa entre concluída e pendente.
 DarkMode: possibilidade de alternar entre o tema claro e escuro.
 
-📁 Acesso ao projeto:
-Você pode rodar a aplicação por meio desse link: https://effulgent-seahorse-b63486.netlify.app/
